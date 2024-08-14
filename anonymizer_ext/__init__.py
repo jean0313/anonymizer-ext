@@ -1,10 +1,12 @@
 from .phone_number import *
 
+from typing import List, Optional
+from presidio_analyzer import Pattern
 from langchain_experimental.data_anonymizer import PresidioAnonymizer
 from presidio_anonymizer.entities import OperatorConfig
 
-def sg_phone_number_init(anonymizer: PresidioAnonymizer):
-    anonymizer.add_recognizer(SgPhoneNumberRecognizer())
+def init_anonymizer_sg_phone_number(anonymizer: PresidioAnonymizer, recognizer_patterns: Optional[List[Pattern]] = None):
+    anonymizer.add_recognizer(SgPhoneNumberRecognizer(recognizer_patterns))
 
     operator = SgPhoneNumberOperator()
     anonymizer.add_operators({
@@ -14,4 +16,6 @@ def sg_phone_number_init(anonymizer: PresidioAnonymizer):
         })
     pass
 
-__all__ = ["sg_phone_number_init"]
+__all__ = [
+    "init_anonymizer_sg_phone_number",
+]
