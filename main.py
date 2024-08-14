@@ -1,5 +1,5 @@
 from langchain_experimental.data_anonymizer import PresidioAnonymizer
-from extension import *
+from anonymizer_ext import *
 
 anonymizer = PresidioAnonymizer()
 sg_phone_number_init(anonymizer)

@@ -11,7 +11,7 @@ class SGPhoneNumberProvider(BaseProvider):
     def singapore_international_phone_number(self):
         return f"+65 {self.singapore_phone_number()}"
     
-class SGPhoneNumberOperator:
+class SgPhoneNumberOperator:
     def __init__(self) -> None:
         self.fake = Faker()
         self.fake.add_provider(SGPhoneNumberProvider)
