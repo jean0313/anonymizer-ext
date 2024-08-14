@@ -5,7 +5,7 @@ anonymizer = PresidioAnonymizer()
 sg_phone_number_init(anonymizer)
 
 data = anonymizer.anonymize(
-    "My name is Slim Shady, call me at +65 96667440 or email me at real.slim.shady@gmail.com"
+    "My name is Slim Shady, call me at +65 96667440 or email me at real.slim.shady@gmail.com, my id is M4331962R"
 )
 
 print(data)

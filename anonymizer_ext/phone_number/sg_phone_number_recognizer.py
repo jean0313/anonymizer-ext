@@ -15,7 +15,7 @@ class SgPhoneNumberRecognizer(PatternRecognizer):
     PATTERNS = [
         Pattern(
             "SG Phone Number",
-            r"(\+65\s?|65\s?)?[3689]\d{7}",
+            r"(\+65\s?|\b65\s?)?[3689]\d{7}\b",
             0.5,
         ),
     ]
